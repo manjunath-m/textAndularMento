@@ -1,0 +1,24 @@
+<div text-angular ng-model='ngModel' ta-text-editor-setup='setup'></div>
+ 
+<mentio-menu mentio-for="'htmlContent'"
+             mentio-trigger-char="'@'"
+             mentio-items="people"
+             mentio-template-url="/iterator.tpl"
+             mentio-search="searchPeople(term)"
+             mentio-select="getPeopleText(item)">
+</mentio-menu>
+<mentio-menu mentio-for="'htmlContent'"
+             mentio-trigger-char="'#'"
+             mentio-items="items"
+             mentio-template-url="/iterator.tpl"
+             mentio-search="searchItems(term)"
+             mentio-select="getItemText(item)">
+</mentio-menu>
+
+<script type="text/ng-template" id="/iterator.tpl">
+    <ul class="list-group user-search">
+        <li mentio-menu-item="item" ng-repeat="item in items" class="list-group-item">
+            <span class="text-primary" ng-bind-html="item.name"></span>
+        </li>
+    </ul>
+</script>
