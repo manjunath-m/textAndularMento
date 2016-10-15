@@ -7,4 +7,6 @@ version 0.15.1.
 
 Run `npm install` for downloading dependencies
 
+Run `bower install` for downloading dependencies
+
 Run `grunt` for building and `grunt serve` for preview.
